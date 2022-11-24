@@ -5,7 +5,7 @@ metadata:
   name: helloworld-tf
 spec:
   interval: 1m
-  url: https://github.com/flux-subsystem-argo/tf-controller-helloworld
+  url: https://github.com/prajyot-narulkar925/tf-controller-helloworld
   ref:
     branch: main
 ---
@@ -15,7 +15,7 @@ metadata:
   name: helloworld-tf
 spec:
   path: ./terraform
-  approvePlan: ""
+  approvePlan: auto
   interval: 1m
   sourceRef:
     kind: GitRepository
