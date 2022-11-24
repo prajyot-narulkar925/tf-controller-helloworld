@@ -9,5 +9,5 @@ variable "subject" {
 }
 
 output "hello_world" {
-  value = "Hello! hey hey ya, ${var.subject}!"
+  value = "Hello! Terraform hey hey ya, ${var.subject}!"
 }
