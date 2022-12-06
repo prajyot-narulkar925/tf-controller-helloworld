@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: helloworld-tf
+  name: helloworld-tf-test
 spec:
   interval: 1m
   url: https://github.com/prajyot-narulkar925/tf-controller-helloworld
@@ -12,13 +12,16 @@ spec:
 apiVersion: infra.contrib.fluxcd.io/v1alpha1
 kind: Terraform
 metadata:
-  name: helloworld-tf
+  name: helloworld-terraform
 spec:
   path: ./terraform
+  workspace: prod
+  backendConfig:
+    secretSuffix: test-hello
   approvePlan: auto
   interval: 1m
   sourceRef:
     kind: GitRepository
-    name: helloworld-tf
+    name: helloworld-tf-test
   writeOutputsToSecret:
     name: helloworld-outputs
