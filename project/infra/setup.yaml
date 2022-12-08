@@ -14,7 +14,7 @@ kind: Terraform
 metadata:
   name: helloworld-terraform
 spec:
-  path: ./terraform
+  path: ./project/terraform
   workspace: prod
   backendConfig:
     secretSuffix: test-hello
